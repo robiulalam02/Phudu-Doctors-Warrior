@@ -3,7 +3,7 @@ import { NavLink } from 'react-router';
 
 const Navbar = () => {
     return (
-        <nav className='bg-base-100 shadow-sm'>
+        <nav className='bg-transparent py-6'>
             <div className="navbar max-w-screen-xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -25,20 +25,20 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <img src="src/assets/logo.png" alt="" />
+                        <img src="/assets/logo.png" alt="" />
                         <a className="text-3xl font-bold">Phudu</a>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <li><NavLink to="/">Home</NavLink></li>
+                    <ul className="menu menu-horizontal px-1 text-lg gap-6">
+                        <li className='rounded-none'><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/my-bookings">My-Bookings</NavLink></li>
                         <li><NavLink to="/blogs">Blogs</NavLink></li>
                         <li><NavLink to="/contact-us">Contact Us</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Emergency</a>
+                    <button className='bg-[#176AE5] px-6 py-3 rounded-full text-white font-medium'>Emergency</button>
                 </div>
             </div>
         </nav>

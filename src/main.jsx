@@ -5,10 +5,10 @@ import './index.css'
 import {
   RouterProvider,
 } from "react-router";
-import Root from './Root.jsx';
+import Rout from './Rout.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={Root} />
+    <RouterProvider router={Rout} />
   </StrictMode>,
 )

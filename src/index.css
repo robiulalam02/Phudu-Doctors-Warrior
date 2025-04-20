@@ -6,4 +6,9 @@
 
 body{
     font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #efefef;
+}
+
+a.active{
+    border-bottom: 2px solid black;
 }
