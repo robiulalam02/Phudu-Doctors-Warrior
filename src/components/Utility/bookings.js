@@ -1,3 +1,4 @@
+
 const storedData = () => {
     const getStoredData = localStorage.getItem('appoinment');
     if (getStoredData) {
@@ -8,15 +9,15 @@ const storedData = () => {
     }
 }
 
-const setLocalData = (doctor) => {
+const setLocalData = (doctor, successfulToast, unseccessfulToast) => {
     const storedWishListData = storedData();
     if (storedWishListData.some(item=> item.id === doctor.id)) {
-        alert('already marked book as read');
+        unseccessfulToast();
     } else {
         storedWishListData.push(doctor);
         const data = JSON.stringify(storedWishListData);
         localStorage.setItem('appoinment', data);
-        alert('Apppoinment booked successfully')
+        successfulToast();
     }
 }
 

@@ -21,10 +21,11 @@ const Rout = createBrowserRouter([
         },
         {
           path: 'my-bookings',
-          Component: Bookings
-        }
+          Component: Bookings,
+        },
       ]
     },
+    
   ]);
 
 export default Rout;

@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { useLoaderData, useNavigate, useParams } from 'react-router';
 import { setLocalData } from '../components/Utility/bookings';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Details = () => {
     const data = useLoaderData();
     const { id } = useParams();
     const convertedId = parseInt(id)
     const [details, setDetails] = useState([]);
+    const notify = () => toast("Appoinment Booked Successfully");
+    const booked = () => toast.warning("Appoinment already booked");
+    const navigate = useNavigate()
 
     useEffect(() => {
         const filteredData = data.find(doctor => doctor.id === parseInt(convertedId));
@@ -14,12 +18,14 @@ const Details = () => {
     }, [data, convertedId])
 
     const handleBookAppoinment = (data) => {
-        setLocalData(data);
+        navigate('/my-bookings')
+        setLocalData(data, notify, booked);
+        
     }
-
 
     return (
         <div className='max-w-screen-xl mx-auto'>
+            
             <div className='text-center px-40 py-14 rounded-2xl mb-5 bg-white'>
                 <h3 className='text-3xl font-bold mb-5'>Doctor’s Profile Details</h3>
                 <p>
@@ -27,6 +33,8 @@ const Details = () => {
                 </p>
 
             </div>
+
+            <ToastContainer />
 
             <div className='flex items-center p-10 bg-white rounded-2xl gap-6 mb-5'>
                 <div className='w-[300px] h-[350px] overflow-hidden rounded-xl'>

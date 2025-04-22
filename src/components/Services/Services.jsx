@@ -11,7 +11,7 @@ const Services = () => {
             <div className='grid grid-cols-4 gap-5'>
                 <div className='bg-gradient-to-r from-blue-900 to-blue-500 text-white rounded-xl p-10 flex flex-col gap-5'>
                     <div>
-                        <img src="assets/success-doctor.png" alt="" />
+                        <img src="/assets/success-doctor.png" alt="" />
                     </div>
                     <h3 className='text-6xl font-bold'>
                     <CountUp
@@ -24,7 +24,7 @@ const Services = () => {
                 </div>
                 <div className='bg-gradient-to-r from-blue-900 to-blue-500 text-white rounded-xl p-10 flex flex-col gap-5'>
                     <div>
-                        <img src="assets/success-review.png" alt="" />
+                        <img src="/assets/success-review.png" alt="" />
                     </div>
                     <h3 className='text-6xl font-bold'>
                     <CountUp
@@ -37,7 +37,7 @@ const Services = () => {
                 </div>
                 <div className='bg-gradient-to-r from-blue-900 to-blue-500 text-white rounded-xl p-10 flex flex-col gap-5'>
                     <div>
-                        <img src="assets/success-patients.png" alt="" />
+                        <img src="/assets/success-patients.png" alt="" />
                     </div>
                     <h3 className='text-6xl font-bold'>
                     <CountUp
@@ -50,7 +50,7 @@ const Services = () => {
                 </div>
                 <div className='bg-gradient-to-r from-blue-900 to-blue-500 text-white rounded-xl p-10 flex flex-col gap-5'>
                     <div>
-                        <img src="assets/success-staffs.png" alt="" />
+                        <img src="/assets/success-staffs.png" alt="" />
                     </div>
                     <h3 className='text-6xl font-bold'>
                     <CountUp
