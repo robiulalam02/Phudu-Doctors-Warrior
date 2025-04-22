@@ -11,7 +11,7 @@ const storedData = () => {
 
 const setLocalData = (doctor, successfulToast, unseccessfulToast) => {
     const storedWishListData = storedData();
-    if (storedWishListData.some(item=> item.id === doctor.id)) {
+    if (storedWishListData.some(item => item.id === doctor.id)) {
         unseccessfulToast();
     } else {
         storedWishListData.push(doctor);
@@ -21,4 +21,6 @@ const setLocalData = (doctor, successfulToast, unseccessfulToast) => {
     }
 }
 
-export { setLocalData, storedData };
+
+
+export { setLocalData, storedData, removeLocalStorage };

@@ -74,7 +74,7 @@ const Details = () => {
                 <div className='w-[90%] mt-4'>
                     <p className='py-1 px-3 bg-[#FFA00033] text-[#FFA000] rounded-full'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
                 </div>
-                <button onClick={()=>handleBookAppoinment(details)} className='text-white border w-full bg-[#176AE5] py-2 rounded-full font-bold mt-10'>Book Appointment Now</button>
+                <button onClick={()=>handleBookAppoinment(details)} className='text-white border w-full bg-[#176AE5] py-3 rounded-full font-bold mt-10'>Book Appointment Now</button>
             </div>
         </div>
     );
