@@ -1,5 +1,5 @@
 const storedData = () => {
-    const getStoredData = localStorage.getItem('markAsRead');
+    const getStoredData = localStorage.getItem('appoinment');
     if (getStoredData) {
         const convertedData = JSON.parse(getStoredData);
         return convertedData;
@@ -8,14 +8,15 @@ const storedData = () => {
     }
 }
 
-const setLocalData = (id) => {
+const setLocalData = (doctor) => {
     const storedWishListData = storedData();
-    if (storedWishListData.includes(id)) {
-        alert('already marked book as read')
+    if (storedWishListData.some(item=> item.id === doctor.id)) {
+        alert('already marked book as read');
     } else {
-        storedWishListData.push(id);
+        storedWishListData.push(doctor);
         const data = JSON.stringify(storedWishListData);
-        localStorage.setItem('markAsRead', data);
+        localStorage.setItem('appoinment', data);
+        alert('Apppoinment booked successfully')
     }
 }
 
