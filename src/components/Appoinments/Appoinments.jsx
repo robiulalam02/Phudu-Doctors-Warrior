@@ -1,13 +1,15 @@
+import { toast } from "react-toastify";
 import { removeLocalStorage } from "../Utility/bookings";
 
 const Appoinments = ({ appoinment, handleDelete }) => {
 
+    const notify = () => toast(`${appoinment.name}'s Appoinment has Canceled Successfully`);
+
     const handleCancelBooking = (id) => {
         removeLocalStorage(id);
         handleDelete(id)
+        notify()
     }
-
-    console.log(appoinment);
 
     return (
         <div className='bg-white p-5 rounded-2xl'>

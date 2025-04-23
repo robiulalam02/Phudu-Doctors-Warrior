@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useNavigate, useParams } from 'react-router';
-import { setLocalData } from '../components/Utility/bookings';
+import { setLocalData, storedData } from '../components/Utility/bookings';
 import { ToastContainer, toast } from 'react-toastify';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
@@ -8,9 +8,8 @@ import Footer from '../components/Footer/Footer';
 const Details = () => {
     const data = useLoaderData();
     const { id } = useParams();
-    console.log(id);
     const [details, setDetails] = useState([]);
-    const notify = () => toast("Appoinment Booked Successfully");
+    const notify = () => toast(`Appoinment Scheduled for ${details.name}`);
     const booked = () => toast.warning("Appoinment already booked");
     const navigate = useNavigate()
 
@@ -20,11 +19,12 @@ const Details = () => {
     }, [data, id])
 
     const handleBookAppoinment = (data) => {
-        navigate('/my-bookings')
+        const localStorageData = storedData();
+        if (!localStorageData.some(item => item.id === data.id)) {
+            navigate('/my-bookings');
+        }
         setLocalData(data, notify, booked);
-
     }
-
     return (
         <>
             <div className='max-w-screen-xl mx-auto'>
@@ -36,8 +36,6 @@ const Details = () => {
                     </p>
 
                 </div>
-
-                <ToastContainer />
 
                 <div className='flex items-center p-10 bg-white rounded-2xl gap-6 mb-5'>
                     <div className='w-[300px] h-[350px] overflow-hidden rounded-xl'>
@@ -80,7 +78,7 @@ const Details = () => {
                     <button onClick={() => handleBookAppoinment(details)} className='text-white border w-full bg-[#176AE5] py-3 rounded-full font-bold mt-10'>Book Appointment Now</button>
                 </div>
             </div>
-        <Footer></Footer>
+            <Footer></Footer>
         </>
     );
 };
