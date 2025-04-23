@@ -4,7 +4,6 @@ import { Bar, BarChart, CartesianGrid, Cell, Tooltip, XAxis, YAxis } from 'recha
 import Appoinments from '../components/Appoinments/Appoinments';
 import Footer from '../components/Footer/Footer';
 import { NavLink } from 'react-router';
-// import { ToastContainer } from 'react-toastify';
 
 const Bookings = () => {
     const [data, setData] = useState([]);
@@ -36,7 +35,7 @@ const Bookings = () => {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
 
-    const noBookAppoinmentMsg = <div className='pb-60 text-center px-40 py-14 rounded-2xl'>
+    const noBookAppoinmentMsg = <div className='pb-60 text-center px-0 md:px-40 py-14 rounded-2xl'>
         <h3 className='text-3xl font-bold mb-5'>You have not Booked any appoinment yet</h3>
         <p>
             Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.
@@ -75,7 +74,7 @@ const Bookings = () => {
                             </BarChart>
                         </div>
                         <div>
-                            <div className='text-center px-40 py-14 rounded-2xl'>
+                            <div className='text-center px-0 md:px-40 py-14 rounded-2xl'>
                                 <h3 className='text-3xl font-bold mb-5'>My Today Appointments</h3>
                                 <p>
                                     Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.

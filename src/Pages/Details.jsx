@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer';
 
 const Details = () => {
     const data = useLoaderData();
+    console.log(data);
     const { id } = useParams();
     const [details, setDetails] = useState([]);
     const notify = () => toast(`Appoinment Scheduled for ${details.name}`);
@@ -29,7 +30,7 @@ const Details = () => {
         <>
             <div className='max-w-screen-xl mx-auto'>
 
-                <div className='text-center px-40 py-14 rounded-2xl mb-5 bg-white'>
+                <div className='text-center px-0 md:px-40 py-14 rounded-2xl mb-5 bg-white'>
                     <h3 className='text-3xl font-bold mb-5'>Doctor’s Profile Details</h3>
                     <p>
                         Explore each doctor's profile to learn about their qualifications, specialties, experience, and patient feedback — helping you choose the right care with confidence.
@@ -37,7 +38,7 @@ const Details = () => {
 
                 </div>
 
-                <div className='flex items-center p-10 bg-white rounded-2xl gap-6 mb-5'>
+                <div className='flex flex-col md:flex-row items-center p-10 bg-white rounded-2xl gap-6 mb-5'>
                     <div className='w-[300px] h-[350px] overflow-hidden rounded-xl'>
                         <img className='h-full w-full object-cover' src={details.image} alt="" />
                     </div>
@@ -73,7 +74,7 @@ const Details = () => {
                         <span className='bg-[#09982F33] text-[#09982F] py-1 px-3 rounded-full'>Doctor Available Today</span>
                     </div>
                     <div className='w-[90%] mt-4'>
-                        <p className='py-1 px-3 bg-[#FFA00033] text-[#FFA000] rounded-full'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
+                        <p className='py-1 px-3 bg-[#FFA00033] text-[#FFA000] rounded-full text-xs md:text-base'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
                     </div>
                     <button onClick={() => handleBookAppoinment(details)} className='text-white border w-full bg-[#176AE5] py-3 rounded-full font-bold mt-10'>Book Appointment Now</button>
                 </div>

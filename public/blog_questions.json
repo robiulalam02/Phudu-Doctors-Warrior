@@ -1,0 +1,28 @@
+[
+    {
+      "question": "What is useState and how does it work in React?",
+      "answer": "useState is a Hook in React that allows you to add state variables to functional components. When you call useState, it returns a pair: the current state value and a function to update it. React will preserve this state between re-renders. You can use it like this: const [count, setCount] = useState(0);",
+      "date": "2025-04-23"
+    },
+    {
+      "question": "What is the purpose of useEffect in React?",
+      "answer": "useEffect is a Hook used to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM. It runs after the component renders. You can control when it runs by providing a dependency array as the second argument.",
+      "date": "2025-04-23"
+    },
+    {
+      "question": "What is a custom hook in React and when should you use one?",
+      "answer": "A custom hook is a JavaScript function that starts with 'use' and can call other hooks inside it. It's used to extract and reuse logic across multiple components, helping to keep components clean and DRY. Use one when you find yourself repeating logic involving state or effects.",
+      "date": "2025-04-23"
+    },
+    {
+      "question": "Difference between controlled and uncontrolled components? Which one is better?",
+      "answer": "Controlled components are form elements where the React state manages their current values via props. Uncontrolled components keep their state internally in the DOM. Controlled components offer more control and are preferred for most React applications due to easier validation and consistency.",
+      "date": "2025-04-23"
+    },
+    {
+      "question": "Tell us something about useFormStatus()",
+      "answer": "useFormStatus() is a hook introduced in React to help manage the submission status of forms, especially in the context of server actions in frameworks like Next.js. It provides information such as whether the form is currently submitting, letting you conditionally disable buttons or show loading indicators.",
+      "date": "2025-04-23"
+    }
+  ]
+  

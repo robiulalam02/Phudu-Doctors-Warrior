@@ -9,7 +9,7 @@ const Footer = () => {
                     <img src="/assets/logo.png" alt="" />
                     <a className="text-3xl font-bold">Phudu</a>
                 </div>
-                <ul className="menu menu-horizontal px-1 gap-6">
+                <ul className="menu menu-vertical md:menu-horizontal px-1 gap-6 text-sm">
                     <li className='rounded-none'><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/my-bookings">My-Bookings</NavLink></li>
                     <li><NavLink to="/blogs">Blogs</NavLink></li>

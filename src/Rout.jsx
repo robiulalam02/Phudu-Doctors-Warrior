@@ -1,4 +1,3 @@
-import React from 'react';
 import { createBrowserRouter } from 'react-router';
 import App from './App'
 import Home from './Pages/Home';
@@ -6,6 +5,10 @@ import Details from './Pages/Details';
 import Bookings from './Pages/Bookings';
 import Error from './Error/Error';
 import Dynamic_Route_Error from './Error/dynamic_Route_Error';
+import BLogs from './Pages/BLogs';
+import Loading from './Pages/Loading';
+
+// const doctorsDataPromise = fetch('/doctorsData.json').then(res=>res.json())
 
 const Rout = createBrowserRouter([
     {
@@ -23,11 +26,21 @@ const Rout = createBrowserRouter([
           ErrorBoundary: Dynamic_Route_Error
         },
         {
+          id: "invoice",
           path: 'my-bookings',
           Component: Bookings,
+          HydrateFallback: Loading
+        },
+        {
+          path: 'blogs',
+          Component: BLogs,
         },
       ]
     },
+    {
+      future: {
+        v7_partialHydration: true,}
+      },
     {
       path: '*',
       Component: Error

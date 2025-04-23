@@ -3,7 +3,7 @@ import { removeLocalStorage } from "../Utility/bookings";
 
 const Appoinments = ({ appoinment, handleDelete }) => {
 
-    const notify = () => toast(`${appoinment.name}'s Appoinment has Canceled Successfully`);
+    const notify = () => toast.success(`${appoinment.name}'s Appoinment has Canceled Successfully`);
 
     const handleCancelBooking = (id) => {
         removeLocalStorage(id);
