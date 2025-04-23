@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import Details from './Pages/Details';
 import Bookings from './Pages/Bookings';
 import Error from './Error/Error';
-import dynamic_Route_Error from './Error/dynamic_Route_Error';
+import Dynamic_Route_Error from './Error/dynamic_Route_Error';
 
 const Rout = createBrowserRouter([
     {
@@ -16,18 +16,17 @@ const Rout = createBrowserRouter([
           index: true,
           Component: Home
         },
-        
+        {
+          path: 'details/:id',
+          loader: ()=> fetch('/doctorsData.json'),
+          Component: Details,
+          ErrorBoundary: Dynamic_Route_Error
+        },
+        {
+          path: 'my-bookings',
+          Component: Bookings,
+        },
       ]
-    },
-    {
-      path: 'details/:id',
-      loader: ()=> fetch('/doctorsData.json'),
-      Component: Details,
-      ErrorBoundary: dynamic_Route_Error
-    },
-    {
-      path: 'my-bookings',
-      Component: Bookings,
     },
     {
       path: '*',

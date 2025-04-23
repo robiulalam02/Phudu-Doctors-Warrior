@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { removeLocalStorage, storedData } from '../components/Utility/bookings';
 import { Bar, BarChart, CartesianGrid, Cell, Tooltip, XAxis, YAxis } from 'recharts';
 import Appoinments from '../components/Appoinments/Appoinments';
+import Footer from '../components/Footer/Footer';
+import { NavLink } from 'react-router';
 // import { ToastContainer } from 'react-toastify';
 
 const Bookings = () => {
@@ -33,46 +35,60 @@ const Bookings = () => {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
 
-    console.log(data);
+    const noBookAppoinmentMsg = <div className='pb-60 text-center px-40 py-14 rounded-2xl'>
+        <h3 className='text-3xl font-bold mb-5'>You have not Booked any appoinment yet</h3>
+        <p>
+            Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.
+        </p>
+        <NavLink to="/">
+            <button className='bg-[#176AE5] px-6 py-3 mt-5 rounded-lg text-white font-medium'>Book an Appoinment</button>
+        </NavLink>
+    </div>
 
     return (
-        <div className='max-w-screen-xl mx-auto flex flex-col justify-center'>
-            <div className='bg-white p-10 rounded-2xl flex justify-center'>
-                <BarChart
-                    width={1100}
-                    height={540}
-                    data={data}
-                    margin={{
-                        top: 20,
-                        right: 30,
-                        left: 20,
-                        bottom: 5,
-                    }}
-                >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis ticks={[250, 500, 750, 1000, 1200]} />
-                    <Tooltip></Tooltip>
-                    <Bar dataKey="consultationFee" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                        {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-                        ))}
-                    </Bar>
-                </BarChart>
-            </div>
-            <div>
-                <div className='text-center px-40 py-14 rounded-2xl'>
-                    <h3 className='text-3xl font-bold mb-5'>My Today Appointments</h3>
-                    <p>
-                        Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.
-                    </p>
-                </div>
-                <div className='flex flex-col gap-5 mb-20'>
-                    {
-                        data?.map(appoinment=> <Appoinments handleDelete={handleDelete} key={appoinment.id} appoinment={appoinment}></Appoinments>)
-                    }
-                </div>
-            </div>
+        <div>
+            {
+                data.length === 0 ? noBookAppoinmentMsg :
+                    <div className='max-w-screen-xl mx-auto flex flex-col justify-center'>
+                        <div className='bg-white p-10 rounded-2xl flex justify-center'>
+                            <BarChart
+                                width={1100}
+                                height={540}
+                                data={data}
+                                margin={{
+                                    top: 20,
+                                    right: 30,
+                                    left: 20,
+                                    bottom: 5,
+                                }}
+                            >
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="name" />
+                                <YAxis ticks={[250, 500, 750, 1000, 1200]} />
+                                <Tooltip></Tooltip>
+                                <Bar dataKey="consultationFee" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                                    {data.map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+                                    ))}
+                                </Bar>
+                            </BarChart>
+                        </div>
+                        <div>
+                            <div className='text-center px-40 py-14 rounded-2xl'>
+                                <h3 className='text-3xl font-bold mb-5'>My Today Appointments</h3>
+                                <p>
+                                    Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.
+                                </p>
+                            </div>
+                            <div className='flex flex-col gap-5 mb-20'>
+                                {
+                                    data?.map(appoinment => <Appoinments handleDelete={handleDelete} key={appoinment.id} appoinment={appoinment}></Appoinments>)
+                                }
+                            </div>
+                        </div>
+                    </div>
+            }
+            <Footer></Footer>
         </div>
     );
 };

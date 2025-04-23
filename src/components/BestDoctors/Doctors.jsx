@@ -22,7 +22,7 @@ const Doctors = ({ doctor }) => {
             <p className='border-dashed border-b border-gray-400 pb-2'>{doctor.education}</p>
             <p>Reg No: {doctor.registrationNumber}</p>
 
-            <NavLink to={`/details/${doctor.id}`}>
+            <NavLink to={`/details/${doctor.registrationNumber}`}>
                 <button className='text-[#176AE5] border w-full border-[#176AE5] py-2 rounded-full font-bold'>View Details</button>
             </NavLink>
 

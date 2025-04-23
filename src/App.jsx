@@ -8,11 +8,14 @@ function App() {
 
   return (
     <>
-      <div>
+
+      <header>
         <Navbar></Navbar>
+      </header>
+      <main>
         <Outlet></Outlet>
-        <Footer></Footer>
-      </div>
+      </main>
+
     </>
   )
 }
