@@ -1,9 +1,10 @@
 import { removeLocalStorage } from "../Utility/bookings";
 
-const Appoinments = ({ appoinment }) => {
+const Appoinments = ({ appoinment, handleDelete }) => {
 
-    const handleCancelBooking = (data) => {
-        removeLocalStorage(data)
+    const handleCancelBooking = (id) => {
+        removeLocalStorage(id);
+        handleDelete(id)
     }
 
     console.log(appoinment);
@@ -18,7 +19,7 @@ const Appoinments = ({ appoinment }) => {
                 <p>Appoinment Fee: <span>{appoinment.consultationFee}</span> Taka+ Vat</p>
             </div>
             <div>
-                <button onClick={() => handleCancelBooking(appoinment)} className='text-[#FF0000] border w-full border-[#FF0000] py-3 rounded-full font-bold mt-4'>Cancel Appoinment</button>
+                <button onClick={() => handleCancelBooking(appoinment.id)} className='text-[#FF0000] border w-full border-[#FF0000] py-3 rounded-full font-bold mt-4'>Cancel Appoinment</button>
             </div>
         </div>
     );

@@ -21,6 +21,11 @@ const setLocalData = (doctor, successfulToast, unseccessfulToast) => {
     }
 }
 
+const removeLocalStorage = id => {
+    const localStorageData = storedData();
+    const filteredData = localStorageData.filter(data=> data.id !== id)
+    localStorage.setItem('appoinment', JSON.stringify(filteredData))
+}
 
 
 export { setLocalData, storedData, removeLocalStorage };

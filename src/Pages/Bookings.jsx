@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { storedData } from '../components/Utility/bookings';
+import { removeLocalStorage, storedData } from '../components/Utility/bookings';
 import { Bar, BarChart, CartesianGrid, Cell, Tooltip, XAxis, YAxis } from 'recharts';
 import Appoinments from '../components/Appoinments/Appoinments';
 // import { ToastContainer } from 'react-toastify';
@@ -13,6 +13,11 @@ const Bookings = () => {
         const localStorageData = storedData();
         setData(localStorageData);
     }, [])
+
+    const handleDelete = id => {
+        removeLocalStorage(id);
+        setData(storedData)
+    }
 
 
     const getPath = (x, y, width, height) => {
@@ -64,7 +69,7 @@ const Bookings = () => {
                 </div>
                 <div className='flex flex-col gap-5 mb-20'>
                     {
-                        data?.map(appoinment=> <Appoinments key={appoinment.id} appoinment={appoinment}></Appoinments>)
+                        data?.map(appoinment=> <Appoinments handleDelete={handleDelete} key={appoinment.id} appoinment={appoinment}></Appoinments>)
                     }
                 </div>
             </div>
