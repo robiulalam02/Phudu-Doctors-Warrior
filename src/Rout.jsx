@@ -6,9 +6,7 @@ import Bookings from './Pages/Bookings';
 import Error from './Error/Error';
 import Dynamic_Route_Error from './Error/dynamic_Route_Error';
 import BLogs from './Pages/BLogs';
-import Loading from './Pages/Loading';
 
-// const doctorsDataPromise = fetch('/doctorsData.json').then(res=>res.json())
 
 const Rout = createBrowserRouter([
     {
@@ -21,15 +19,14 @@ const Rout = createBrowserRouter([
         },
         {
           path: 'details/:id',
-          loader: ()=> fetch('/doctorsData.json'),
           Component: Details,
-          ErrorBoundary: Dynamic_Route_Error
+          ErrorBoundary: Dynamic_Route_Error,
+          loader: ()=> fetch('/doctorsData.json')
         },
         {
           id: "invoice",
           path: 'my-bookings',
           Component: Bookings,
-          HydrateFallback: Loading
         },
         {
           path: 'blogs',
@@ -37,10 +34,6 @@ const Rout = createBrowserRouter([
         },
       ]
     },
-    {
-      future: {
-        v7_partialHydration: true,}
-      },
     {
       path: '*',
       Component: Error

@@ -24,6 +24,12 @@ const BestDoctors = () => {
         }
     }, [doctors, showAll]);
 
+    console.log(doctors);
+    
+    console.log(showAll);
+
+    console.log(showDoctors);
+
     return (
         <div className='mb-20 px-4 md:px-0'>
             <div className='text-center px-0 md:px-40 mb-5'>

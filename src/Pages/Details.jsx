@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useNavigate, useParams } from 'react-router';
 import { setLocalData, storedData } from '../components/Utility/bookings';
-import { ToastContainer, toast } from 'react-toastify';
-import Navbar from '../components/Navbar/Navbar';
+import { toast } from 'react-toastify';
 import Footer from '../components/Footer/Footer';
 
 const Details = () => {
     const data = useLoaderData();
-    console.log(data);
     const { id } = useParams();
     const [details, setDetails] = useState([]);
     const notify = () => toast(`Appoinment Scheduled for ${details.name}`);
@@ -81,7 +79,7 @@ const Details = () => {
             </div>
             <Footer></Footer>
         </>
-    );
+    )
 };
 
 export default Details;

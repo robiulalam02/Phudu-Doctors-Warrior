@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co/VWbcF7bZ/doctor-female-6.jpg",
+    "image": "https://i.postimg.cc/rs5xVzfD/doctor-female-6.jpg",
     "name": "Dr. Ayesha Rahman",
     "education": "MBBS, FCPS (Medicine)",
     "speciality": "Internal Medicine",
@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "image": "https://i.ibb.co/pvB525s6/doctor-male-1.jpg",
+    "image": "https://i.postimg.cc/hPqVCbGT/doctor-male-1.jpg",
     "name": "Dr. Kamrul Hasan",
     "education": "MBBS, MS (Orthopedics)",
     "speciality": "Orthopedic Surgeon",
@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "image": "https://i.ibb.co/fVJQyM5j/doctor-female-1.jpg",
+    "image": "https://i.postimg.cc/wvThk6xP/doctor-female-1.jpg",
     "name": "Dr. Nusrat Jahan",
     "education": "MBBS, MD (Cardiology)",
     "speciality": "Cardiologist",
@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "image": "https://i.ibb.co/G3FSyXss/doctor-male-2.jpg",
+    "image": "https://i.postimg.cc/7hNhtzBn/doctor-male-2.jpg",
     "name": "Dr. Tanvir Ahmed",
     "education": "MBBS, FCPS (Surgery)",
     "speciality": "General Surgeon",
@@ -53,7 +53,7 @@
   },
   {
     "id": 5,
-    "image": "https://i.ibb.co/v4JyS5n4/doctor-female-2.jpg",
+    "image": "https://i.postimg.cc/qqKXN1vM/doctor-female-2.jpg",
     "name": "Dr. Farhana Kabir",
     "education": "MBBS, DGO",
     "speciality": "Gynecologist",
@@ -66,7 +66,7 @@
   },
   {
     "id": 6,
-    "image": "https://i.ibb.co/rRQDJWzF/doctor-male-3.jpg",
+    "image": "https://i.postimg.cc/GmttzHvv/doctor-male-3.jpg",
     "name": "Dr. Mahmudul Haque",
     "education": "MBBS, MD (Neurology)",
     "speciality": "Neurologist",
@@ -79,7 +79,7 @@
   },
   {
     "id": 7,
-    "image": "https://i.ibb.co/JRCyq64k/doctor-female-3.jpg",
+    "image": "https://i.postimg.cc/Nf1kYCnd/doctor-female-3.jpg",
     "name": "Dr. Samira Akter",
     "education": "MBBS, FCPS (Dermatology)",
     "speciality": "Dermatologist",
@@ -92,7 +92,7 @@
   },
   {
     "id": 8,
-    "image": "https://i.ibb.co.com/8nmfcSQ3/doctor-male-4.jpg",
+    "image": "https://i.postimg.cc/g2xc81PD/doctor-male-4.jpg",
     "name": "Dr. Rezaul Karim",
     "education": "MBBS, MS (ENT)",
     "speciality": "ENT Specialist",
@@ -105,7 +105,7 @@
   },
   {
     "id": 9,
-    "image": "https://i.ibb.co.com/99PrHSxm/doctor-female-4.jpg",
+    "image": "https://i.postimg.cc/NjD829BT/doctor-female-4.jpg",
     "name": "Dr. Lima Chowdhury",
     "education": "MBBS, FCPS (Pediatrics)",
     "speciality": "Pediatrician",
@@ -118,7 +118,7 @@
   },
   {
     "id": 10,
-    "image": "https://i.ibb.co.com/67xQ4cQV/doctor-male-7.jpg",
+    "image": "https://i.postimg.cc/T1sF67Hd/doctor-male-6.jpg",
     "name": "Dr. Arif Hossain",
     "education": "MBBS, MD (Psychiatry)",
     "speciality": "Psychiatrist",
@@ -131,7 +131,7 @@
   },
   {
     "id": 11,
-    "image": "https://i.ibb.co.com/KxFRc1rt/doctor-female-5.jpg",
+    "image": "https://i.postimg.cc/gJX37gRq/doctor-female-5.jpg",
     "name": "Dr. Sabrina Nasrin",
     "education": "MBBS, FCPS (Ophthalmology)",
     "speciality": "Eye Specialist",
@@ -144,7 +144,7 @@
   },
   {
     "id": 12,
-    "image": "https://i.ibb.co.com/9mhD5LnL/doctor-male-6.jpg",
+    "image": "https://i.postimg.cc/HnWdxh2b/doctor-male-5.jpg",
     "name": "Dr. Towhid Alam",
     "education": "MBBS, MS (Urology)",
     "speciality": "Urologist",

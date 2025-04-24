@@ -5,7 +5,7 @@ const Doctors = ({ doctor }) => {
     const available = <span className='bg-[#09982F33] text-[#09982F] py-1 px-3 rounded-full'>Available</span>;
     const unavailable = <span className='bg-[#FFAC3326] text-[#ff6d33] py-1 px-3 rounded-full'>Unavailable</span>;
     return (
-        <div className='bg-white p-6 rounded-2xl flex flex-col gap-4'>
+        <div className='bg-gradient-to-t from-[#FFFFFF] to-[#ffffff00] border-white border-2 p-6 rounded-2xl flex flex-col gap-4'>
             <div className='w-full h-[250px] overflow-hidden rounded-2xl'>
                 <img className='w-full h-full object-cover' src={doctor.image} alt="" />
                 

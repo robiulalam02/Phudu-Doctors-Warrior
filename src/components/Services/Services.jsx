@@ -18,7 +18,7 @@ const Services = () => {
                             <CountUp
                                 start={0}
                                 end={199}
-                                duration={5}
+                                duration={7}
                             />+
                         </h3>
                         <p className='text-lg font-medium'>Total Doctors</p>
@@ -33,7 +33,7 @@ const Services = () => {
                             <CountUp
                                 start={0}
                                 end={467}
-                                duration={5}
+                                duration={7}
                             />+
                         </h3>
                         <p className='text-lg font-medium'>Total Reviews</p>
@@ -48,7 +48,7 @@ const Services = () => {
                             <CountUp
                                 start={0}
                                 end={1900}
-                                duration={5}
+                                duration={7}
                             />+
                         </h3>
                         <p className='text-lg font-medium'>Patients</p>
@@ -63,7 +63,7 @@ const Services = () => {
                             <CountUp
                                 start={0}
                                 end={300}
-                                duration={5}
+                                duration={7}
                             />+
                         </h3>
                         <p className='text-lg font-medium'>Total Stuffs</p>

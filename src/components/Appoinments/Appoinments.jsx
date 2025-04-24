@@ -13,7 +13,7 @@ const Appoinments = ({ appoinment, handleDelete }) => {
 
     return (
         <div className='bg-white p-5 rounded-2xl'>
-            <div className='flex items-center justify-between border-b border-dashed border-gray-600'>
+            <div className='flex flex-col md:flex-row items-center justify-between md:border-b md:border-dashed border-gray-400 border-b-0'>
                 <div className='py-2'>
                     <h3 className='pb-2 text-xl font-bold'>{appoinment.name}</h3>
                     <p>{appoinment.education}</p>
