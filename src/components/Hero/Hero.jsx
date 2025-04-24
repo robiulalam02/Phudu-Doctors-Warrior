@@ -12,12 +12,14 @@ const Hero = () => {
                     <input className='bg-white border border-gray-400 w-full py-2 md:py-3 px-4 rounded-full' placeholder='search any doctor...' type="text" name="" id="" />
                 </div>
                 <div>
-                    <button className='bg-[#176AE5] px-6 py-3 rounded-full text-white font-medium text-xs md:text-base'>Search Now</button>  
+                    <button className='bg-[#176AE5] px-6 py-3 rounded-full text-white font-medium text-xs md:text-base'>Search Now</button>
                 </div>
             </div>
             <div className='flex items-center gap-5'>
                 <img src="/assets/banner-img-1.png" alt="" />
-                <img className='hidden md:block' src="/assets/banner-img-1.png" alt="" />
+                <div className='hidden md:block w-[578px] h-[350px] overflow-hidden rounded-3xl'>
+                    <img className='h-full w-full object-cover' src="/assets/banner-img-2.jpg" alt="" />
+                </div>
             </div>
         </div>
     );
