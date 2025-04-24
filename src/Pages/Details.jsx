@@ -26,7 +26,7 @@ const Details = () => {
     }
     return (
         <>
-            <div className='max-w-screen-xl mx-auto'>
+            <div className='max-w-screen-xl mx-auto text-black'>
 
                 <div className='text-center px-0 md:px-40 py-14 rounded-2xl mb-5 bg-white'>
                     <h3 className='text-3xl font-bold mb-5'>Doctor’s Profile Details</h3>

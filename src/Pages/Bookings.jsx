@@ -35,7 +35,7 @@ const Bookings = () => {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
 
-    const noBookAppoinmentMsg = <div className='pb-60 text-center px-0 md:px-40 py-14 rounded-2xl'>
+    const noBookAppoinmentMsg = <div className='pb-60 text-black text-center px-0 md:px-40 py-14 rounded-2xl'>
         <h3 className='text-3xl font-bold mb-5'>You have not Booked any appoinment yet</h3>
         <p>
             Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.
@@ -49,7 +49,7 @@ const Bookings = () => {
         <div>
             {
                 data.length === 0 ? noBookAppoinmentMsg :
-                    <div className='max-w-screen-xl mx-auto flex flex-col justify-center'>
+                    <div className='max-w-screen-xl mx-auto flex flex-col justify-center text-black'>
                         <div className='bg-white p-10 rounded-2xl flex justify-center h-[300px] md:h-[600px]'>
                                 <ResponsiveContainer width={"100%"} height={"100%"}>
                                 <BarChart

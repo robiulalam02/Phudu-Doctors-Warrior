@@ -24,14 +24,8 @@ const BestDoctors = () => {
         }
     }, [doctors, showAll]);
 
-    console.log(doctors);
-    
-    console.log(showAll);
-
-    console.log(showDoctors);
-
     return (
-        <div className='mb-20 px-4 md:px-0'>
+        <div className='mb-20 px-4 md:px-0 text-black'>
             <div className='text-center px-0 md:px-40 mb-5'>
                 <h3 className='text-3xl font-bold mb-5'>Our Best Doctors</h3>
                 <p>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>

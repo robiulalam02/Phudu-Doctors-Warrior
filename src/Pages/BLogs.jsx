@@ -11,7 +11,7 @@ const BLogs = () => {
 
     return (
         <>
-            <div className='max-w-screen-xl mx-auto flex flex-col gap-5 mb-20' >
+            <div className='max-w-screen-xl mx-auto flex flex-col gap-5 mb-20 text-black' >
                 {
                     questions?.map((questionData, index) => <Question key={index} questionData={questionData}></Question>)
                 }
