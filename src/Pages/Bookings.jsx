@@ -4,6 +4,7 @@ import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis
 import Appoinments from '../components/Appoinments/Appoinments';
 import Footer from '../components/Footer/Footer';
 import { NavLink } from 'react-router';
+import { Helmet } from 'react-helmet-async';
 
 const Bookings = () => {
     const [data, setData] = useState([]);
@@ -47,6 +48,9 @@ const Bookings = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Phudu | My-Bookings</title>
+            </Helmet>
             {
                 data.length === 0 ? noBookAppoinmentMsg :
                     <div className='max-w-screen-xl mx-auto flex flex-col justify-center text-black'>

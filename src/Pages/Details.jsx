@@ -3,6 +3,7 @@ import { useLoaderData, useNavigate, useParams } from 'react-router';
 import { setLocalData, storedData } from '../components/Utility/bookings';
 import { toast } from 'react-toastify';
 import Footer from '../components/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Details = () => {
     const data = useLoaderData();
@@ -11,7 +12,7 @@ const Details = () => {
     const notify = () => toast(`Appoinment Scheduled for ${details.name}`);
     const booked = () => toast.warning("Appoinment already booked");
     const navigate = useNavigate()
-
+    
     useEffect(() => {
         const filteredData = data?.find(doctor => doctor.registrationNumber === id);
         setDetails(filteredData)
@@ -24,8 +25,12 @@ const Details = () => {
         }
         setLocalData(data, notify, booked);
     }
+
     return (
         <>
+            <Helmet>
+                <title>Phudu | Doctor Details</title>
+            </Helmet>
             <div className='max-w-screen-xl mx-auto text-black'>
 
                 <div className='text-center px-0 md:px-40 py-14 rounded-2xl mb-5 bg-white'>

@@ -2,10 +2,14 @@ import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import { NavLink } from 'react-router';
 import { PiHouseLineBold } from 'react-icons/pi';
+import { Helmet } from 'react-helmet-async';
 
 const Error = () => {
     return (
         <>
+            <Helmet>
+                <title>Page not found</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className='h-screen max-w-screen-xl mx-auto bg-[url(/assets/404_error.svg)] bg-no-repeat bg-contain bg-center text-center'>
                 <div className='flex justify-center'>

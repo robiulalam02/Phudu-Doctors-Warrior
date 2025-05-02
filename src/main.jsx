@@ -6,9 +6,12 @@ import {
   RouterProvider,
 } from "react-router";
 import Rout from './Rout.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={Rout} />
-  </StrictMode>,
+    <HelmetProvider>
+      <RouterProvider router={Rout} />
+    </HelmetProvider>
+  </StrictMode>
 )

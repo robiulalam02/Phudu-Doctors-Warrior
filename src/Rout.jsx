@@ -15,13 +15,14 @@ const Rout = createBrowserRouter([
       children: [
         {
           index: true,
+          loader: ()=> fetch('/doctorsData.json'),
           Component: Home
         },
         {
           path: 'details/:id',
+          loader: ()=> fetch('/doctorsData.json'),
           Component: Details,
-          ErrorBoundary: Dynamic_Route_Error,
-          loader: ()=> fetch('/doctorsData.json')
+          ErrorBoundary: Dynamic_Route_Error          
         },
         {
           id: "invoice",
