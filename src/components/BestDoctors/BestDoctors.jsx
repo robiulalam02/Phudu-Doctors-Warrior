@@ -31,7 +31,7 @@ const BestDoctors = ({ searchValue }) => {
             </div>
             {
                 doctors.length === 0 ? <h3 className='text-center text-xl font-bold mb-5 text-warning'>No Doctor Found!!!</h3> :
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-0 md:px-5 lg:px-0'>
                         {
                             showDoctors.map(doctor => <Doctors key={doctor.id} doctor={doctor}></Doctors>)
                         }

@@ -6,7 +6,7 @@ const Hero = ({ getSearchValue }) => {
 
     return (
         <div className='bg-gradient-to-t from-[#FFFFFF] to-[#ffffff00] p-5 md:p-12 rounded-3xl text-center flex flex-col-reverse md:flex-col justify-between items-center gap-5 mb-20 border-white border-2 text-black'>
-            <div className='px-0 md:px-44 flex flex-col gap-5'>
+            <div className='px-0 lg:px-44 flex flex-col gap-5'>
                 <h1 className='text-4xl font-bold'>Dependable Care, Backed by Trusted Professionals.</h1>
                 <p className='text-sm'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
             </div>
